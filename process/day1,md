@@ -1,0 +1,102 @@
+# Process – Day 1
+
+## What is a Process?
+
+A **process is a program that is currently running**.
+
+Examples:
+
+* Open Chrome → Chrome is a process
+* Open VS Code → VS Code is a process
+* Open Spotify → Spotify is a process
+
+A process usually has its own memory space.
+
+---
+
+## What is a Thread?
+
+A **thread is a small unit of work inside a process**.
+
+For example, Chrome may use different threads to:
+
+* Load a webpage
+* Play a video
+* Download a file
+* Handle keyboard and mouse input
+
+So:
+
+> **Process = Running program**
+> **Thread = Unit of work inside a process**
+
+---
+
+## What is a Scheduler?
+
+The **scheduler** is a part of the operating system that decides **which process or thread gets CPU time**.
+
+For example, if Chrome and VS Code are running:
+
+```text
+CPU → Chrome
+     ↓
+CPU → VS Code
+     ↓
+CPU → Chrome
+     ↓
+CPU → VS Code
+```
+
+The switching happens very quickly, so it looks like both programs are running at the same time.
+
+---
+
+## Context Switching
+
+When the CPU switches from one process to another, it is called a **context switch**.
+
+Example:
+
+```text
+Chrome → VS Code → Chrome → VS Code
+```
+
+The operating system saves the current process's state and loads the state of the next process.
+
+---
+
+## Simple Real-Life Example
+
+Imagine there is **one chef** and two orders:
+
+```text
+Order 1 → Pizza
+Order 2 → Burger
+```
+
+The chef works like this:
+
+```text
+Pizza for a while
+      ↓
+Burger for a while
+      ↓
+Pizza again
+      ↓
+Burger again
+```
+
+Here:
+
+* **Chef = CPU**
+* **Orders = Processes**
+* **Manager = Scheduler**
+* **Switching between orders = Context Switching**
+
+### Key Points
+
+* **Process** → A running program
+* **Thread** → A unit of work inside a process
+* **Scheduler** → Decides which process/thread gets CPU time
+* **Context Switch** → CPU switches from one process/thread to another
